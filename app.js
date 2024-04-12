@@ -1,20 +1,50 @@
-// Get the button element
+// <<=== All Variable Declarations  ===>>
+
+const content = document.querySelector('#content');
 let btn = document.querySelector('#btn');
+
+let counter1 = document.querySelector('#counter1');
+let counter2 = document.querySelector('#counter2');
+let counter3 = document.querySelector('#counter3');
+let counter4 = document.querySelector('#counter4');
+let counter5 = document.querySelector('#counter5');
+
+let newButton7Created = false;
+let newButton8Created = false;
+let newButton9Created = false;
+let newButton10Created = false;
+let newButton11Created = false;
+
+let clickCount1 = 0;
+let clickCount2 = 0;
+let clickCount3 = 0;
+let clickCount4 = 0;
+let clickCount5 = 0;
+
 let newButton1;
 let newButton2;
 let newButton3;
 let newButton4;
 let newButton5;
 let newButton6;
+let newButton7;
+let newButton8;
+let newButton9;
+let newButton10;
+let newButton11;
 
-// Get the content div
-const content = document.querySelector('#content');
+// <<=== All Function Declarations  ===>>
+
 
 function onClick() {
     warning.style.display = 'none';
     btn.style.display = 'none';
+    content.style.color = 'white';
+    content.style.fontSize = '30px';
+    content.style.fontWeight = 'bold';
     content.innerHTML = 'What kind of Cookie do you want?';
     content.style.display = 'flex';
+
     newButton1 = document.createElement('button');
     newButton1.innerHTML = 'Chocolate Chip Cookie';
     newButton1.classList.add('cookie1');
@@ -40,7 +70,7 @@ function onClick() {
     newButton5.classList.add('cookie5');
     document.body.appendChild(newButton5)
 
-    document.body.style.backgroundImage = 'url(css/assets/cookies.png)';
+    document.body.style.backgroundImage = 'url(css/assets/jars.png)';
 
     newButton1.addEventListener('click', ChocolateChip);
     newButton2.addEventListener('click', SugarCookie);
@@ -52,23 +82,41 @@ function onClick() {
 function ChocolateChip() {
     content.innerHTML = 'You have chosen the Chocolate Chip Cookie!';
     content.style.display = 'flex';
-    newButton1.style.display = 'none';
+    newButton1.innerHTML = '';
+    newButton1.style.backgroundImage = 'url(css/assets/chocolateChip.png)';
+    newButton1.style.backgroundSize = 'cover';
+    newButton1.style.width = '250px';
+    newButton1.style.height = '250px';
+    newButton1.style.border = 'none';
+    newButton1.style.outline = 'none';
+    newButton1.style.borderRadius = '50%';
+    newButton1.style.boxShadow = '10px 10px 10px rgba(0, 0, 0, 0.5)';
     newButton2.style.display = 'none';
     newButton3.style.display = 'none';
     newButton4.style.display = 'none';
     newButton5.style.display = 'none';
+    //newButton6.style.display = 'none';
     newButton6 = document.createElement('button');
     newButton6.innerHTML = 'Try again?';
     newButton6.classList.add('tryAgain');
     document.body.appendChild(newButton6);
+    newButton1.addEventListener('click', ccScore);
     newButton6.addEventListener('click', reload);
 }
 
 function SugarCookie() {
     content.innerHTML = 'You have chosen the Sugar Cookie!';
     content.style.display = 'flex';
+    newButton2.innerHTML = '';
+    newButton2.style.backgroundImage = 'url(css/assets/sugar.png)';
+    newButton2.style.backgroundSize = 'cover';
+    newButton2.style.width = '250px';
+    newButton2.style.height = '250px';
+    newButton2.style.border = 'none';
+    newButton2.style.outline = 'none';
+    newButton2.style.borderRadius = '50%';
+    newButton2.style.boxShadow = '10px 10px 10px rgba(0, 0, 0, 0.5)';
     newButton1.style.display = 'none';
-    newButton2.style.display = 'none';
     newButton3.style.display = 'none';
     newButton4.style.display = 'none';
     newButton5.style.display = 'none';
@@ -76,56 +124,241 @@ function SugarCookie() {
     newButton6.innerHTML = 'Try again?';
     newButton6.classList.add('tryAgain');
     document.body.appendChild(newButton6);
+    newButton2.addEventListener('click', scScore);
     newButton6.addEventListener('click', reload);
 }
 
 function OatmealCookie() {  
     content.innerHTML = 'You have chosen the Oatmeal Cookie!';
     content.style.display = 'flex';
+    newButton3.innerHTML = '';
+    newButton3.style.backgroundImage = 'url(css/assets/oatmeal.png)';
+    newButton3.style.backgroundSize = 'cover';
+    newButton3.style.width = '250px';
+    newButton3.style.height = '250px';
+    newButton3.style.border = 'none';
+    newButton3.style.outline = 'none';
+    newButton3.style.borderRadius = '50%';
+    newButton3.style.boxShadow = '10px 10px 10px rgba(0, 0, 0, 0.5)';
     newButton1.style.display = 'none';
     newButton2.style.display = 'none';
-    newButton3.style.display = 'none';
     newButton4.style.display = 'none';
     newButton5.style.display = 'none';
     newButton6 = document.createElement('button');
     newButton6.innerHTML = 'Try again?';
     newButton6.classList.add('tryAgain');
     document.body.appendChild(newButton6);
+    newButton3.addEventListener('click', ocScore);
     newButton6.addEventListener('click', reload);
 }
 
 function CookieDough() {
     content.innerHTML = 'You have chosen the Cookie Dough!';
     content.style.display = 'flex';
+    newButton4.innerHTML = '';
+    newButton4.style.backgroundImage = 'url(css/assets/dough.png)';
+    newButton4.style.backgroundSize = 'cover';
+    newButton4.style.width = '250px';
+    newButton4.style.height = '250px';
+    newButton4.style.border = 'none';
+    newButton4.style.outline = 'none';
+    newButton4.style.borderRadius = '50%';
+    newButton4.style.boxShadow = '10px 10px 10px rgba(0, 0, 0, 0.5)';
     newButton1.style.display = 'none';
     newButton2.style.display = 'none';
     newButton3.style.display = 'none';
-    newButton4.style.display = 'none';
     newButton5.style.display = 'none';
     newButton6 = document.createElement('button');
     newButton6.innerHTML = 'Try again?';
     newButton6.classList.add('tryAgain');
     document.body.appendChild(newButton6);
+    newButton4.addEventListener('click', cdScore);
     newButton6.addEventListener('click', reload);
 }
 
 function PeanutButterCookie() {
     content.innerHTML = 'You have chosen the Peanut Butter Cookie!';
     content.style.display = 'flex';
+    newButton5.innerHTML = '';
+    newButton5.style.backgroundImage = 'url(css/assets/peanut.png)';
+    newButton5.style.backgroundSize = 'cover';
+    newButton5.style.width = '250px';
+    newButton5.style.height = '250px';
+    newButton5.style.border = 'none';
+    newButton5.style.outline = 'none';
+    newButton5.style.borderRadius = '50%';
+    newButton5.style.boxShadow = '10px 10px 10px rgba(0, 0, 0, 0.5)';
     newButton1.style.display = 'none';
     newButton2.style.display = 'none';
     newButton3.style.display = 'none';
     newButton4.style.display = 'none';
-    newButton5.style.display = 'none';
     newButton6 = document.createElement('button');
     newButton6.innerHTML = 'Try again?';
     newButton6.classList.add('tryAgain');
     document.body.appendChild(newButton6);
+    newButton5.addEventListener('click', cdScore);
     newButton6.addEventListener('click', reload);
+}
+
+function ccScore() {
+    clickCount1++;
+    counter1.innerHTML = clickCount1;
+    counter1.display = 'flex';
+    counter1.style.color = 'white';
+    counter1.style.fontSize = '30px';
+    counter1.style.fontWeight = 'bold'
+    newButton6.style.display = 'none';
+    document.body.appendChild(counter1);
+}
+
+setInterval(function() {
+    if (clickCount1 > 14 && !newButton7Created) {
+        newButton7 = document.createElement('button');
+        document.body.appendChild(newButton7);
+        newButton7.innerHTML = 'Vomit';
+        newButton7.style.backgroundImage = 'url(css/assets/vomit.png)';
+        newButton7.style.width = '250px';
+        newButton7.style.height = '250px';
+        newButton7.style.backgroundSize = 'cover';
+        newButton7.style.textAlign = 'center';
+        newButton7.style.alignItems = 'center';
+        newButton7.style.color = 'white';
+        newButton7.style.display = 'flex';
+        newButton7.style.fontSize = '50px';
+        newButton7.style.fontWeight = 'bold';
+        newButton7.style.border = 'none';
+        newButton7.style.outline = 'none';
+        newButton7.style.borderRadius = '50%';
+        newButton7Created = true;
+    }
+    if (clickCount2 > 14 && !newButton8Created) {
+        newButton8 = document.createElement('button');
+        document.body.appendChild(newButton8);
+        newButton8.innerHTML = 'Vomit';
+        newButton8.style.backgroundImage = 'url(css/assets/vomit.png)';
+        newButton8.style.width = '250px';
+        newButton8.style.height = '250px';
+        newButton8.style.backgroundSize = 'cover';
+        newButton8.style.textAlign = 'center';
+        newButton8.style.alignItems = 'center';
+        newButton8.style.color = 'white';
+        newButton8.style.display = 'flex';
+        newButton8.style.fontSize = '50px';
+        newButton8.style.fontWeight = 'bold';
+        newButton8.style.border = 'none';
+        newButton8.style.outline = 'none';
+        newButton8.style.borderRadius = '50%';
+        newButton8Created = true;
+    }
+    if (clickCount3 > 14 && !newButton9Created) {
+        newButton9 = document.createElement('button');
+        document.body.appendChild(newButton9);
+        newButton9.innerHTML = 'Vomit';
+        newButton9.style.backgroundImage = 'url(css/assets/vomit.png)';
+        newButton9.style.width = '250px';
+        newButton9.style.height = '250px';
+        newButton9.style.backgroundSize = 'cover';
+        newButton9.style.textAlign = 'center';
+        newButton9.style.alignItems = 'center';
+        newButton9.style.color = 'white';
+        newButton9.style.display = 'flex';
+        newButton9.style.fontSize = '50px';
+        newButton9.style.fontWeight = 'bold';
+        newButton9.style.border = 'none';
+        newButton9.style.outline = 'none';
+        newButton9.style.borderRadius = '50%';
+        newButton9Created = true;
+    }
+    if (clickCount4 > 14 && !newButton10Created) {
+        newButton10 = document.createElement('button');
+        document.body.appendChild(newButton10);
+        newButton10.innerHTML = 'Vomit';
+        newButton10.style.backgroundImage = 'url(css/assets/vomit.png)';
+        newButton10.style.width = '250px';
+        newButton10.style.height = '250px';
+        newButton10.style.backgroundSize = 'cover';
+        newButton10.style.textAlign = 'center';
+        newButton10.style.alignItems = 'center';
+        newButton10.style.color = 'white';
+        newButton10.style.display = 'flex';
+        newButton10.style.fontSize = '50px';
+        newButton10.style.fontWeight = 'bold';
+        newButton10.style.border = 'none';
+        newButton10.style.outline = 'none';
+        newButton10.style.borderRadius = '50%';
+        newButton10Created = true;
+    }
+    if (clickCount5 > 14 && !newButton11Created) {
+        newButton11 = document.createElement('button');
+        document.body.appendChild(newButton11);
+        newButton11.innerHTML = 'Vomit';
+        newButton11.style.backgroundImage = 'url(css/assets/vomit.png)';
+        newButton11.style.width = '250px';
+        newButton11.style.height = '250px';
+        newButton11.style.backgroundSize = 'cover';
+        newButton11.style.textAlign = 'center';
+        newButton11.style.alignItems = 'center';
+        newButton11.style.color = 'white';
+        newButton11.style.display = 'flex';
+        newButton11.style.fontSize = '50px';
+        newButton11.style.fontWeight = 'bold';
+        newButton11.style.border = 'none';
+        newButton11.style.outline = 'none';
+        newButton11.style.borderRadius = '50%';
+        newButton11Created = true;
+    }
+}, 1000);
+
+
+function scScore() {
+    clickCount2++;
+    counter2.innerHTML = clickCount2;
+    counter2.display = 'flex';
+    counter2.style.color = 'white';
+    counter2.style.fontSize = '30px';
+    counter2.style.fontWeight = 'bold'
+    newButton6.style.display = 'none';
+    document.body.appendChild(counter2);
+}
+
+function ocScore() {
+    clickCount3++;
+    counter3.innerHTML = clickCount3;
+    counter3.display = 'flex';
+    counter3.style.color = 'white';
+    counter3.style.fontSize = '30px';
+    counter3.style.fontWeight = 'bold'
+    newButton6.style.display = 'none';
+    document.body.appendChild(counter3);
+}
+
+function cdScore() {
+    clickCount4++;
+    counter4.innerHTML = clickCount4;
+    counter4.display = 'flex';
+    counter4.style.color = 'white';
+    counter4.style.fontSize = '30px';
+    counter4.style.fontWeight = 'bold'
+    newButton6.style.display = 'none';
+    document.body.appendChild(counter4);
+}
+
+function pbScore() {
+    clickCount5++;
+    counter5.innerHTML = clickCount5;
+    counter5.display = 'flex';
+    counter5.style.color = 'white';
+    counter5.style.fontSize = '30px';
+    counter5.style.fontWeight = 'bold'
+    newButton6.style.display = 'none';
+    document.body.appendChild(counter5);
 }
 
 function reload() {
     location.reload();
 }
 
+// <<=== All Event Listeners  ===>>
+
 btn.addEventListener('click', onClick);
+newButton1.addEventListener('click', ccScore);
