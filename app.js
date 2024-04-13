@@ -32,6 +32,7 @@ let newButton8;
 let newButton9;
 let newButton10;
 let newButton11;
+let newButton12;
 
 // <<=== All Function Declarations  ===>>
 
@@ -71,6 +72,7 @@ function onClick() {
     document.body.appendChild(newButton5)
 
     document.body.style.backgroundImage = 'url(css/assets/jars.png)';
+    document.body.style.backgroundSize = 'cover';
 
     newButton1.addEventListener('click', ChocolateChip);
     newButton2.addEventListener('click', SugarCookie);
@@ -80,7 +82,7 @@ function onClick() {
 }
 
 function ChocolateChip() {
-    content.innerHTML = 'You have chosen the Chocolate Chip Cookie!';
+    content.innerHTML = 'Click the Cookie as fast as you can for 10 seconds!!';
     content.style.display = 'flex';
     newButton1.innerHTML = '';
     newButton1.style.backgroundImage = 'url(css/assets/chocolateChip.png)';
@@ -95,17 +97,21 @@ function ChocolateChip() {
     newButton3.style.display = 'none';
     newButton4.style.display = 'none';
     newButton5.style.display = 'none';
-    //newButton6.style.display = 'none';
     newButton6 = document.createElement('button');
     newButton6.innerHTML = 'Try again?';
     newButton6.classList.add('tryAgain');
     document.body.appendChild(newButton6);
+    if (clickCount1 > 14) {
+        newButton1.style.display = 'none';
+        content.innerHTML = 'You ate too many cookies and now you are sick!';
+    }
     newButton1.addEventListener('click', ccScore);
     newButton6.addEventListener('click', reload);
+    
 }
 
 function SugarCookie() {
-    content.innerHTML = 'You have chosen the Sugar Cookie!';
+    content.innerHTML = 'Click the Cookie as fast as you can for 10 seconds!!';
     content.style.display = 'flex';
     newButton2.innerHTML = '';
     newButton2.style.backgroundImage = 'url(css/assets/sugar.png)';
@@ -124,12 +130,16 @@ function SugarCookie() {
     newButton6.innerHTML = 'Try again?';
     newButton6.classList.add('tryAgain');
     document.body.appendChild(newButton6);
+    if (clickCount2 > 14) {
+        newButton2.style.display = 'none';
+        content.innerHTML = 'You ate too many cookies and now you are sick!';
+    }
     newButton2.addEventListener('click', scScore);
     newButton6.addEventListener('click', reload);
 }
 
 function OatmealCookie() {  
-    content.innerHTML = 'You have chosen the Oatmeal Cookie!';
+    content.innerHTML = 'Click the Cookie as fast as you can for 10 seconds!!';
     content.style.display = 'flex';
     newButton3.innerHTML = '';
     newButton3.style.backgroundImage = 'url(css/assets/oatmeal.png)';
@@ -148,12 +158,16 @@ function OatmealCookie() {
     newButton6.innerHTML = 'Try again?';
     newButton6.classList.add('tryAgain');
     document.body.appendChild(newButton6);
+    if (clickCount3 > 14) {
+        newButton3.style.display = 'none';
+        content.innerHTML = 'You ate too many cookies and now you are sick!';
+    }
     newButton3.addEventListener('click', ocScore);
     newButton6.addEventListener('click', reload);
 }
 
 function CookieDough() {
-    content.innerHTML = 'You have chosen the Cookie Dough!';
+    content.innerHTML = 'Click the dough as fast as you can for 10 seconds!!';
     content.style.display = 'flex';
     newButton4.innerHTML = '';
     newButton4.style.backgroundImage = 'url(css/assets/dough.png)';
@@ -172,12 +186,16 @@ function CookieDough() {
     newButton6.innerHTML = 'Try again?';
     newButton6.classList.add('tryAgain');
     document.body.appendChild(newButton6);
+    if (clickCount4 > 14) {
+        newButton4.style.display = 'none';
+        content.innerHTML = 'You ate too many cookies and now you are sick!';
+    }
     newButton4.addEventListener('click', cdScore);
     newButton6.addEventListener('click', reload);
 }
 
 function PeanutButterCookie() {
-    content.innerHTML = 'You have chosen the Peanut Butter Cookie!';
+    content.innerHTML = 'Click the Cookie as fast as you can for 10 seconds!!';
     content.style.display = 'flex';
     newButton5.innerHTML = '';
     newButton5.style.backgroundImage = 'url(css/assets/peanut.png)';
@@ -196,6 +214,10 @@ function PeanutButterCookie() {
     newButton6.innerHTML = 'Try again?';
     newButton6.classList.add('tryAgain');
     document.body.appendChild(newButton6);
+    if (clickCount5 > 14) {
+        newButton5.style.display = 'none';
+        content.innerHTML = 'You ate too many cookies and now you are sick!';
+    }
     newButton5.addEventListener('click', cdScore);
     newButton6.addEventListener('click', reload);
 }
@@ -215,7 +237,7 @@ setInterval(function() {
     if (clickCount1 > 14 && !newButton7Created) {
         newButton7 = document.createElement('button');
         document.body.appendChild(newButton7);
-        newButton7.innerHTML = 'Vomit';
+        newButton7.innerHTML = '';
         newButton7.style.backgroundImage = 'url(css/assets/vomit.png)';
         newButton7.style.width = '250px';
         newButton7.style.height = '250px';
@@ -234,7 +256,7 @@ setInterval(function() {
     if (clickCount2 > 14 && !newButton8Created) {
         newButton8 = document.createElement('button');
         document.body.appendChild(newButton8);
-        newButton8.innerHTML = 'Vomit';
+        newButton8.innerHTML = '';
         newButton8.style.backgroundImage = 'url(css/assets/vomit.png)';
         newButton8.style.width = '250px';
         newButton8.style.height = '250px';
@@ -253,7 +275,7 @@ setInterval(function() {
     if (clickCount3 > 14 && !newButton9Created) {
         newButton9 = document.createElement('button');
         document.body.appendChild(newButton9);
-        newButton9.innerHTML = 'Vomit';
+        newButton9.innerHTML = '';
         newButton9.style.backgroundImage = 'url(css/assets/vomit.png)';
         newButton9.style.width = '250px';
         newButton9.style.height = '250px';
@@ -272,7 +294,7 @@ setInterval(function() {
     if (clickCount4 > 14 && !newButton10Created) {
         newButton10 = document.createElement('button');
         document.body.appendChild(newButton10);
-        newButton10.innerHTML = 'Vomit';
+        newButton10.innerHTML = '';
         newButton10.style.backgroundImage = 'url(css/assets/vomit.png)';
         newButton10.style.width = '250px';
         newButton10.style.height = '250px';
@@ -291,7 +313,7 @@ setInterval(function() {
     if (clickCount5 > 14 && !newButton11Created) {
         newButton11 = document.createElement('button');
         document.body.appendChild(newButton11);
-        newButton11.innerHTML = 'Vomit';
+        newButton11.innerHTML = '';
         newButton11.style.backgroundImage = 'url(css/assets/vomit.png)';
         newButton11.style.width = '250px';
         newButton11.style.height = '250px';
@@ -308,7 +330,6 @@ setInterval(function() {
         newButton11Created = true;
     }
 }, 1000);
-
 
 function scScore() {
     clickCount2++;
@@ -361,4 +382,3 @@ function reload() {
 // <<=== All Event Listeners  ===>>
 
 btn.addEventListener('click', onClick);
-newButton1.addEventListener('click', ccScore);
