@@ -387,7 +387,7 @@ function ccScore() {
     counter1.innerHTML = clickCount1;
     counter1.display = 'flex';
     counter1.style.color = 'white';
-    counter1.style.fontSize = '30px';
+    counter1.style.fontSize = '90px';
     counter1.style.fontWeight = 'bold'
     newButton6.style.display = 'none';
     document.body.appendChild(counter1);
@@ -398,7 +398,7 @@ function scScore() {
     counter2.innerHTML = clickCount2;
     counter2.display = 'flex';
     counter2.style.color = 'white';
-    counter2.style.fontSize = '30px';
+    counter2.style.fontSize = '90px';
     counter2.style.fontWeight = 'bold'
     newButton6.style.display = 'none';
     document.body.appendChild(counter2);
@@ -409,7 +409,7 @@ function ocScore() {
     counter3.innerHTML = clickCount3;
     counter3.display = 'flex';
     counter3.style.color = 'white';
-    counter3.style.fontSize = '30px';
+    counter3.style.fontSize = '90px';
     counter3.style.fontWeight = 'bold'
     newButton6.style.display = 'none';
     document.body.appendChild(counter3);
@@ -420,7 +420,7 @@ function cdScore() {
     counter4.innerHTML = clickCount4;
     counter4.display = 'flex';
     counter4.style.color = 'white';
-    counter4.style.fontSize = '30px';
+    counter4.style.fontSize = '90px';
     counter4.style.fontWeight = 'bold'
     newButton6.style.display = 'none';
     document.body.appendChild(counter4);
@@ -431,7 +431,7 @@ function pbScore() {
     counter5.innerHTML = clickCount5;
     counter5.display = 'flex';
     counter5.style.color = 'white';
-    counter5.style.fontSize = '30px';
+    counter5.style.fontSize = '90px';
     counter5.style.fontWeight = 'bold'
     newButton6.style.display = 'none';
     document.body.appendChild(counter5);
