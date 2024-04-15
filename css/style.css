@@ -7,7 +7,8 @@ body {
         "MORF" 15,
         "SHLN" 50;
     background-image: url('assets/back.png');
-    background-size: flex;
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,10 +27,10 @@ body {
 }    */
 
 #btn {
-    background-image: url('assets/danger.jpeg');
+    background-image: url('assets/danger.png');
     background-size: cover;
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     border: none;
     outline: none;
     transition: 0.9s ease-in-out;
