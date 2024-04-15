@@ -1,6 +1,14 @@
 body {
+    font-family: "Honk", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "MORF" 15,
+        "SHLN" 50;
     background-image: url('assets/back.png');
-    background-size: cover;
+    background-size: flex;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,7 +43,10 @@ body {
 }
 
 @media screen and (max-width: 600px) {
+    body {
+        margin-top: 50px;
     }
+}
 
 
 

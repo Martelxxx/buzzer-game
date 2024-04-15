@@ -4,6 +4,10 @@ const content = document.querySelector('#content');
 let btn = document.querySelector('#btn');
 let sound = new Audio('css/assets/fart.mp3');
 let sound2 = new Audio('css/assets/bite.mp3');
+let cookies = ['Chocolate Chip Cookie', 'Sugar Cookie', 'Oatmeal Cookie', 'Cookie Dough', 'Peanut Butter Cookie'];
+let randomNumber = Math.floor(Math.random() * cookies.length);
+let randomCookie = cookies[randomNumber];
+let alertShown = false;
 
 let counter1 = document.querySelector('#counter1');
 let counter2 = document.querySelector('#counter2');
@@ -35,6 +39,7 @@ let newButton9;
 let newButton10;
 let newButton11;
 let newButton12;
+let newButton13;
 
 // <<=== All Function Declarations  ===>>
 
@@ -73,14 +78,26 @@ function onClick() {
     newButton5.classList.add('cookie5');
     document.body.appendChild(newButton5)
 
+    newButton13 = document.createElement('button');
+    newButton13.innerHTML = 'Choose For Me!';
+    newButton13.classList.add('cookie6');
+    document.body.appendChild(newButton13)
+
     document.body.style.backgroundImage = 'url(css/assets/jars.png)';
-    document.body.style.backgroundSize = 'cover';
+    document.body.style.backgroundSize = 'flex';
 
     newButton1.addEventListener('click', ChocolateChip);
     newButton2.addEventListener('click', SugarCookie);
     newButton3.addEventListener('click', OatmealCookie);
     newButton4.addEventListener('click', CookieDough);
     newButton5.addEventListener('click', PeanutButterCookie);
+    newButton13.addEventListener('click', ChooseForMe);
+    newButton13.addEventListener('mouseover', function() {
+        if (!alertShown) {
+        alert('Double to click to confirm your desire for randomness!')
+        alertShown = true;
+        }
+    });
 }
 
 function ChocolateChip() {
@@ -99,6 +116,7 @@ function ChocolateChip() {
     newButton3.style.display = 'none';
     newButton4.style.display = 'none';
     newButton5.style.display = 'none';
+    newButton13.style.display = 'none';
     newButton6 = document.createElement('button');
     newButton6.innerHTML = 'Try again?';
     newButton6.classList.add('tryAgain');
@@ -107,7 +125,7 @@ function ChocolateChip() {
         newButton1.style.display = 'none';
         content.innerHTML = 'You ate too many cookies and now you are sick!';
         document.body.style.backgroundImage = 'url(css/assets/bed.png)';
-        document.body.style.backgroundSize = 'cover';
+        document.body.style.backgroundSize = 'flex';
     }
     newButton1.addEventListener('click', ccScore);
     newButton6.addEventListener('click', reload);
@@ -132,6 +150,7 @@ function SugarCookie() {
     newButton3.style.display = 'none';
     newButton4.style.display = 'none';
     newButton5.style.display = 'none';
+    newButton13.style.display = 'none';
     newButton6 = document.createElement('button');
     newButton6.innerHTML = 'Try again?';
     newButton6.classList.add('tryAgain');
@@ -140,6 +159,7 @@ function SugarCookie() {
         newButton2.style.display = 'none';
         content.innerHTML = 'You ate too many cookies and now you are sick!';
         document.body.style.backgroundImage = 'url(css/assets/bed.png)';
+        document.body.style.backgroundSize = 'flex';
     }
     newButton2.addEventListener('click', scScore);
     newButton6.addEventListener('click', reload);
@@ -164,6 +184,7 @@ function OatmealCookie() {
     newButton2.style.display = 'none';
     newButton4.style.display = 'none';
     newButton5.style.display = 'none';
+    newButton13.style.display = 'none';
     newButton6 = document.createElement('button');
     newButton6.innerHTML = 'Try again?';
     newButton6.classList.add('tryAgain');
@@ -172,6 +193,7 @@ function OatmealCookie() {
         newButton3.style.display = 'none';
         content.innerHTML = 'You ate too many cookies and now you are sick!';
         document.body.style.backgroundImage = 'url(css/assets/bed.png)';
+        document.body.style.backgroundSize = 'flex';
     }
     newButton3.addEventListener('click', ocScore);
     newButton6.addEventListener('click', reload);
@@ -196,6 +218,7 @@ function CookieDough() {
     newButton2.style.display = 'none';
     newButton3.style.display = 'none';
     newButton5.style.display = 'none';
+    newButton13.style.display = 'none';
     newButton6 = document.createElement('button');
     newButton6.innerHTML = 'Try again?';
     newButton6.classList.add('tryAgain');
@@ -204,6 +227,7 @@ function CookieDough() {
         newButton4.style.display = 'none';
         content.innerHTML = 'You ate too many cookies and now you are sick!';
         document.body.style.backgroundImage = 'url(css/assets/bed.png)';
+        document.body.style.backgroundSize = 'flex';
     }
     newButton4.addEventListener('click', cdScore);
     newButton6.addEventListener('click', reload);
@@ -228,6 +252,7 @@ function PeanutButterCookie() {
     newButton2.style.display = 'none';
     newButton3.style.display = 'none';
     newButton4.style.display = 'none';
+    newButton13.style.display = 'none';
     newButton6 = document.createElement('button');
     newButton6.innerHTML = 'Try again?';
     newButton6.classList.add('tryAgain');
@@ -236,12 +261,27 @@ function PeanutButterCookie() {
         newButton5.style.display = 'none';
         content.innerHTML = 'You ate too many cookies and now you are sick!';
         document.body.style.backgroundImage = 'url(css/assets/bed.png)';
+        document.body.style.backgroundSize = 'flex';
     }
-    newButton5.addEventListener('click', cdScore);
+    newButton5.addEventListener('click', pbScore);
     newButton6.addEventListener('click', reload);
     newButton5.addEventListener('click', function() {
         sound2.play();
     });
+}
+
+function ChooseForMe() {
+    if (randomNumber === 0) {
+        newButton13.addEventListener('click', ChocolateChip);
+    } else if (randomNumber === 1) {
+        newButton13.addEventListener('click', SugarCookie);
+    } else if (randomNumber === 2) {
+        newButton13.addEventListener('click', OatmealCookie);
+    } else if (randomNumber === 3) {
+        newButton13.addEventListener('click', CookieDough);
+    } else if (randomNumber === 4) {
+        newButton13.addEventListener('click', PeanutButterCookie);
+    }
 }
 
 setInterval(function() {
