@@ -3,6 +3,7 @@
 const content = document.querySelector('#content');
 let btn = document.querySelector('#btn');
 let sound = new Audio('css/assets/fart.mp3');
+let sound2 = new Audio('css/assets/bite.mp3');
 
 let counter1 = document.querySelector('#counter1');
 let counter2 = document.querySelector('#counter2');
@@ -110,7 +111,9 @@ function ChocolateChip() {
     }
     newButton1.addEventListener('click', ccScore);
     newButton6.addEventListener('click', reload);
-    
+    newButton1.addEventListener('click', function() {
+        sound2.play();
+});
 }
 
 function SugarCookie() {
@@ -140,6 +143,9 @@ function SugarCookie() {
     }
     newButton2.addEventListener('click', scScore);
     newButton6.addEventListener('click', reload);
+    newButton2.addEventListener('click', function() {
+        sound2.play();
+});
 }
 
 function OatmealCookie() {  
@@ -169,6 +175,9 @@ function OatmealCookie() {
     }
     newButton3.addEventListener('click', ocScore);
     newButton6.addEventListener('click', reload);
+    newButton3.addEventListener('click', function() {
+        sound2.play();
+});
 }
 
 function CookieDough() {
@@ -198,6 +207,9 @@ function CookieDough() {
     }
     newButton4.addEventListener('click', cdScore);
     newButton6.addEventListener('click', reload);
+    newButton4.addEventListener('click', function() {
+        sound2.play();
+});
 }
 
 function PeanutButterCookie() {
@@ -227,6 +239,9 @@ function PeanutButterCookie() {
     }
     newButton5.addEventListener('click', cdScore);
     newButton6.addEventListener('click', reload);
+    newButton5.addEventListener('click', function() {
+        sound2.play();
+    });
 }
 
 setInterval(function() {
