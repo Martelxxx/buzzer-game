@@ -104,6 +104,8 @@ function ChocolateChip() {
     if (clickCount1 > 14) {
         newButton1.style.display = 'none';
         content.innerHTML = 'You ate too many cookies and now you are sick!';
+        document.body.style.backgroundImage = 'url(css/assets/bed.png)';
+        document.body.style.backgroundSize = 'cover';
     }
     newButton1.addEventListener('click', ccScore);
     newButton6.addEventListener('click', reload);
@@ -133,6 +135,7 @@ function SugarCookie() {
     if (clickCount2 > 14) {
         newButton2.style.display = 'none';
         content.innerHTML = 'You ate too many cookies and now you are sick!';
+        document.body.style.backgroundImage = 'url(css/assets/bed.png)';
     }
     newButton2.addEventListener('click', scScore);
     newButton6.addEventListener('click', reload);
@@ -161,6 +164,7 @@ function OatmealCookie() {
     if (clickCount3 > 14) {
         newButton3.style.display = 'none';
         content.innerHTML = 'You ate too many cookies and now you are sick!';
+        document.body.style.backgroundImage = 'url(css/assets/bed.png)';
     }
     newButton3.addEventListener('click', ocScore);
     newButton6.addEventListener('click', reload);
@@ -189,6 +193,7 @@ function CookieDough() {
     if (clickCount4 > 14) {
         newButton4.style.display = 'none';
         content.innerHTML = 'You ate too many cookies and now you are sick!';
+        document.body.style.backgroundImage = 'url(css/assets/bed.png)';
     }
     newButton4.addEventListener('click', cdScore);
     newButton6.addEventListener('click', reload);
@@ -217,6 +222,7 @@ function PeanutButterCookie() {
     if (clickCount5 > 14) {
         newButton5.style.display = 'none';
         content.innerHTML = 'You ate too many cookies and now you are sick!';
+        document.body.style.backgroundImage = 'url(css/assets/bed.png)';
     }
     newButton5.addEventListener('click', cdScore);
     newButton6.addEventListener('click', reload);
