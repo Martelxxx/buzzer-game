@@ -2,6 +2,7 @@
 
 const content = document.querySelector('#content');
 let btn = document.querySelector('#btn');
+let sound = new Audio('css/assets/fart.mp3');
 
 let counter1 = document.querySelector('#counter1');
 let counter2 = document.querySelector('#counter2');
@@ -228,17 +229,6 @@ function PeanutButterCookie() {
     newButton6.addEventListener('click', reload);
 }
 
-function ccScore() {
-    clickCount1++;
-    counter1.innerHTML = clickCount1;
-    counter1.display = 'flex';
-    counter1.style.color = 'white';
-    counter1.style.fontSize = '30px';
-    counter1.style.fontWeight = 'bold'
-    newButton6.style.display = 'none';
-    document.body.appendChild(counter1);
-}
-
 setInterval(function() {
     if (clickCount1 > 14 && !newButton7Created) {
         newButton7 = document.createElement('button');
@@ -337,6 +327,17 @@ setInterval(function() {
     }
 }, 1000);
 
+function ccScore() {
+    clickCount1++;
+    counter1.innerHTML = clickCount1;
+    counter1.display = 'flex';
+    counter1.style.color = 'white';
+    counter1.style.fontSize = '30px';
+    counter1.style.fontWeight = 'bold'
+    newButton6.style.display = 'none';
+    document.body.appendChild(counter1);
+}
+
 function scScore() {
     clickCount2++;
     counter2.innerHTML = clickCount2;
@@ -388,3 +389,6 @@ function reload() {
 // <<=== All Event Listeners  ===>>
 
 btn.addEventListener('click', onClick);
+btn.addEventListener('click', function() {
+    sound.play();
+});
