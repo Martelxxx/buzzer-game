@@ -4,6 +4,7 @@ const content = document.querySelector('#content');
 let btn = document.querySelector('#btn');
 let sound = new Audio('css/assets/fart.mp3');
 let sound2 = new Audio('css/assets/bite.mp3');
+let sound3 = new Audio('css/assets/alert.wav');
 let cookies = ['Chocolate Chip Cookie', 'Sugar Cookie', 'Oatmeal Cookie', 'Cookie Dough', 'Peanut Butter Cookie'];
 let randomNumber = Math.floor(Math.random() * cookies.length);
 let randomCookie = cookies[randomNumber];
@@ -447,3 +448,23 @@ btn.addEventListener('click', onClick);
 btn.addEventListener('click', function() {
     sound.play();
 });
+
+btn.addEventListener('mouseover', function() {
+    risky.innerHTML = '!! You will encounter elements that, when excessively consumed, pose risks to the well-being of children !!';
+    risky.style.animation = 'flash 3s infinite';
+    risky.style.display = 'space-around';
+    risky.style.fontSize = '60px';
+    risky.style.justifyContent = 'center';
+    risky.style.alignItems = 'center';
+    risky.style.position = 'center';
+    margin = 'center';
+    });
+btn.addEventListener('mouseout', function() {
+    risky.innerHTML = '';
+});
+btn.addEventListener('mouseover', function() {
+    sound3.play();
+});  
+btn.addEventListener('mouseout', function() {
+   sound3.pause();
+}); 
