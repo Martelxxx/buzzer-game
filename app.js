@@ -5,7 +5,9 @@ let btn = document.querySelector('#btn');
 let sound = new Audio('css/assets/fart.mp3');
 let sound2 = new Audio('css/assets/bite.mp3');
 let sound3 = new Audio('css/assets/alert.wav');
+let muteButton = document.querySelector('#mute');
 let cookies = ['Chocolate Chip Cookie', 'Sugar Cookie', 'Oatmeal Cookie', 'Cookie Dough', 'Peanut Butter Cookie'];
+
 let randomNumber = Math.floor(Math.random() * cookies.length);
 let randomCookie = cookies[randomNumber];
 let alertShown = false;
@@ -43,6 +45,9 @@ let newButton12;
 let newButton13;
 
 // <<=== All Function Declarations  ===>>
+
+btn.style.display = 'none';
+warning.style.display = 'none';
 
 
 function onClick() {
@@ -462,6 +467,16 @@ btn.addEventListener('mouseover', function() {
 btn.addEventListener('mouseout', function() {
     risky.innerHTML = '';
 });
+muteButton.addEventListener('click', function() {
+    sound.load();
+    sound2.load();
+    sound3.load();
+    warning.style.display = 'block';
+    btn.style.display = 'block';
+    muteButton.style.display = 'none';
+    muteLabel.style.display = 'none';
+});
+
 btn.addEventListener('mouseover', function() {
     sound3.play();
 });  

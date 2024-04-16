@@ -33,6 +33,24 @@ footer {
     gap: 20px;
 }    */
 
+#mute {
+    display: center;
+    background-image: url('assets/mute.png');
+    width: 60px;
+    height: 60px;
+    background-size: cover;
+    transition: 0.9s ease-in-out;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+#muteLabel {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+}
+
 #btn {
     background-image: url('assets/danger.png');
     background-size: cover;
