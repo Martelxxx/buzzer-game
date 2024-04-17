@@ -2,11 +2,13 @@
 
 const content = document.querySelector('#content');
 let btn = document.querySelector('#btn');
+let muteButton = document.querySelector('#mute');
+
 let sound = new Audio('css/assets/fart.mp3');
 let sound2 = new Audio('css/assets/bite.mp3');
 let sound3 = new Audio('css/assets/alert.wav');
 let sound4 = new Audio('css/assets/radiation.wav');
-let muteButton = document.querySelector('#mute');
+
 let cookies = ['Chocolate Chip Cookie', 'Sugar Cookie', 'Oatmeal Cookie', 'Cookie Dough', 'Peanut Butter Cookie'];
 
 let randomNumber = Math.floor(Math.random() * cookies.length);
@@ -50,7 +52,6 @@ let newButton13;
 
 btn.style.display = 'none';
 warning.style.display = 'none';
-
 
 function onClick() {
     warning.style.display = 'none';
